@@ -148,3 +148,14 @@ webpack.config.js
         },
       }
 ```
+
+不同命令不同包
+
+```
+cross-env NODE_ENV=development
+跨平台 所有的环境变量都是好用的
+```
+
+```
+yarn add cross-env --dev
+```
