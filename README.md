@@ -62,4 +62,11 @@ npm install --save-dev name  只给程序员用
 
 ```
 yarn add webpack-dev-server --dev
+监听运行 npx webpack-dev-server
+```
+
+我们需要 html 页面浏览，安装 html-webpack-plugin
+
+```
+yarn add html-webpack-plugin --dev
 ```

@@ -6,7 +6,7 @@ module.exports = {
     index: "./lib/index.tsx",
   },
   output: {
-    path: path.resolve(__dirname + "dist/lib"),     //输出至文件
+    path: path.resolve(__dirname , "dist"),     //输出至文件
     library: "ZUI",
     libraryTarget: "umd", //统一模块定义
   },
