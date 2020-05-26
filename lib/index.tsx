@@ -1,1 +1,2 @@
-console.log("hi3");
+import React from "react";
+import ReactDOM from "react-dom";

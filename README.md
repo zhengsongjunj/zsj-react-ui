@@ -70,3 +70,52 @@ yarn add webpack-dev-server --dev
 ```
 yarn add html-webpack-plugin --dev
 ```
+
+webpack.config.js 添加插件
+
+```
+const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+module.exports = {
+  mode:'production',
+  entry: {
+    index: "./lib/index.tsx",
+  },
+  output: {
+    path: path.resolve(__dirname , "dist"),     //输出至文件
+    library: "ZUI",
+    libraryTarget: "umd", //统一模块定义
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: "awesome-typescript-loader",
+      },
+    ],
+  },
+  plugins: [
+       new HtmlWebpackPlugin({
+            title: 'ZUI - React',
+            template: 'index.html'
+        })
+    ],
+};
+```
+
+增加命令
+package.json
+
+```
+   "start": "webpack-dev-server",
+    "build": "webpack"
+```
+
+增加依赖
+
+```
+安装react和react-dom
+以及类型声明文件
+yarn add @types/react --dev
+yarn add @types/react-dom --dev
+```
