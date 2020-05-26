@@ -56,3 +56,10 @@ npm install --save-dev name  只给程序员用
 --save -S
 --dev -D
 ```
+
+每次运行完了都要 npx webpack 就很烦，我们需要一个自动打包的工具
+首先安装一波
+
+```
+yarn add webpack-dev-server --dev
+```
