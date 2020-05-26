@@ -119,3 +119,32 @@ package.json
 yarn add @types/react --dev
 yarn add @types/react-dom --dev
 ```
+
+添加别名
+webpack.config.js
+
+```
+ resolve:{
+    extensions:['.ts','.tsx','.js','.jsx']
+  },
+```
+
+外来依赖，需要排除
+webpack.config.js
+
+```
+    externals: {
+        react: {
+          commonjs: 'react',
+          commonjs2: 'react',
+          amd: 'react',
+          root: 'React',
+        },
+        'react-dom': {
+          commonjs: 'react-dom',
+          commonjs2: 'react-dom',
+          amd: 'react-dom',
+          root: 'ReactDOM',
+        },
+      }
+```
