@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/zhengsongjunj/zsj-react-ui/issues"
   },
-  "homepage": "https://github.com/zhengsongjunj/zsj-react-ui#readme"
+  "homepage": "https://github.com/zhengsongjunj/zsj-react-ui#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.2.3"
+  },
+  "dependencies": {
+    "typescript": "^3.9.3"
+  }
 }
