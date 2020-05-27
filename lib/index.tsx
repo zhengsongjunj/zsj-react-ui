@@ -1,5 +1,5 @@
-import React from "react";
+import Icon from "./icon";
 import ReactDOM from "react-dom";
-import Button from "./button";
+import React from "react";
 
-ReactDOM.render(<Button></Button>, document.body);
+ReactDOM.render(<Icon name="wechart" />, document.body);

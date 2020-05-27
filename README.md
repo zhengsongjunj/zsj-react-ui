@@ -159,3 +159,82 @@ cross-env NODE_ENV=development
 ```
 yarn add cross-env --dev
 ```
+
+安装 jset
+
+```
+yarn add --dev jest babel-jest @babel/preset-env @babel/preset-react react-test-renderer
+```
+
+jest 不支持 ts 还要安装 ts
+
+```
+yarn add --dev ts-jest
+```
+
+编写第一个测试用例的时候 test 报错，需要安装@types/jest
+
+```
+yarn add @types/jest --dev
+```
+
+第一个测试用例
+
+```
+function add(a: number, b: number) {
+  return a + b;
+}
+describe("我的第一个测试用例", () => {
+  it("add(1,2)等于3", () => {
+    expect(add(1, 2)).toEqual(3);
+  });
+});
+
+```
+
+需要安装渲染插件 react-test-renderer
+
+```
+yarn add --dev @types/react-test-renderer
+```
+
+每个文件的作用
+
+```
+jest.config.js  jest配置
+tsconfig.js  tsconfig 配置
+tslint.json   代码规范配置
+
+```
+
+### icon 制作时引入 svg,首先在 webpack.config 添加 loader
+
+第一步
+
+```
+module>rules>
+ {
+        test: /\.svg?$/,
+        loader: "svg-sprite-loader",
+      }
+```
+
+安装 svg-sprite-loader
+
+但是 ts 还是不认识 svg，需要在 type 申明 svg 是个什么玩意，跟目录下面新建 types/custom.d.ts
+
+```
+declare module "*.svg" {
+  const content: any;
+  export default content;
+}
+
+```
+
+最后在 tsconfig.json
+
+```
+ "include": [
+    "types/**/*", "lib/**/*"
+  ],    //告诉tsconfig 这里面都是我的源文件
+```

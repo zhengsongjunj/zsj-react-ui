@@ -14,14 +14,15 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
-    "importHelpers": true,
+    "importHelpersyarn": true,
     "strictNullChecks": true,
     // "suppressImplicitAnyIndexErrors": true,
     // https://github.com/Microsoft/TypeScript/issues/28762#issuecomment-443406607
-    "allowSyntheticDefaultImports": true,
+    // "allowSyntheticDefaultImports": true,      //已经被遗弃了，用了就必须使用import * as xxx from xxx
+    "esModuleInterop": true,
     "noUnusedLocals": true
   },
-  "include": [],
+  "include": ["types/**/*", "lib/**/*"],
   "exclude": [
     "node_modules",
     "build",
