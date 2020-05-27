@@ -9,3 +9,4 @@ module.exports = Object.assign({},base,{
         })
     ],
 })
+console.log(module.exports)
