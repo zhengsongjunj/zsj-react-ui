@@ -1,16 +1,16 @@
 import React from "react";
-import wechat from "./icons/wechat.svg";
-console.log(wechat);
+import "./importIcons.js";
+import "./icon.scss";
 interface IconProps {
   name: string;
+  // onClick: React.MouseEventHandler<SVGElement>
+  onClick: () => void;
 }
 const Icon: React.FunctionComponent<IconProps> = (props) => {
   return (
-    <span>
-      <svg>
-        <use xlinkHref="#wechat"></use>
-      </svg>
-    </span>
+    <svg className="zsj-icon" onClick={props.onClick}>
+      <use xlinkHref={`#${props.name}`}></use>
+    </svg>
   );
 };
 
